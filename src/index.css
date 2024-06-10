@@ -1,7 +1,6 @@
 :root {
   --dark: #393939;
   --primary: #EC4242;
-  --primary-purple: #;
   --accent: #FEF6F6;
   --border-red: #FDE8E8;
   --muted: #787878;
@@ -12,6 +11,7 @@
   --avatar-purple: #F3E7F9;
   --chat-bg: #FEF6F6;
   --chat-bg-purple: #FBF7FD;
+  --modal: #c3c3c37a;
   --logo: linear-gradient(#EC4242, #393939);
   --primary-purple: #B934F2;
   --deep-purple: #5A247B;
@@ -25,4 +25,62 @@
 input {
   border: none;
   outline: none;
+}
+
+.fit {
+  width: fit-content;
+  color: var(--dark)
+}
+
+.fit svg path {
+  stroke: var(--dark)
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(1, 10, 2);
+  /* overflow: hidden; */
+}
+
+.dash-feature {
+  width: 100%;
+  background-color: rgb(236, 236, 228);
+}
+
+.user {
+  background-color: var(--chat-bg-purple);
+  border: solid 2px var(--border-purple);
+}
+
+@media screen and (min-width: 1024px) {
+  .dash-feature {
+    width: calc(100% - 280px);
+    min-height: 100vh;
+  }
+}
+
+/* for the dashroutes of the project */
+.active {
+  color: var(--primary-purple)
+}
+
+.active svg path {
+  stroke: var(--primary-purple)
+}
+
+/* bg color */
+.bg-purple {
+  background-color: var(--primary-purple);
+}
+
+/* text color */
+.text-purple {
+  color: var(--primary-purple)
+}
+
+.text-danger {
+  color: var(--primary)
 }

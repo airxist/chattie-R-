@@ -4,7 +4,6 @@ const UserContext = createContext();
 
 const UserProvider = ({children}) => {
     const [ authImg, setAuthImg ] = useState(true);
-    
 
     return (
         <UserContext.Provider value={{

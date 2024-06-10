@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router-dom"
 import styled from "styled-components"
 import Authentication from "./shared/Authentication"
-import { CreateYourSpace, Login, Register, VerifyEmail } from './pages';
+import { About, Anonymous, Chats, CreateYourSpace, DMs, Login, Register, Reply, VerifyEmail } from './pages';
 import Dashboard from "./shared/Dashboard";
+import Profile from "./pages/profile/Profile";
 
 const App = () => {
   return (
@@ -15,17 +16,27 @@ const App = () => {
           <Route path="/verify-email" element={<VerifyEmail />} />
           <Route path="/create-space" element={<CreateYourSpace />} />
         </Route>
-        {/* shared layout */}
+        {/* shared layout Dashboard */}
         <Route path="/dashboard" element={<Dashboard />}>
-
+          <Route index element={<Chats 
+            description="At My team, All communication is strictly business based. Nothing outside business"
+          />} />
+          <Route path="reply" element={<Reply />}/>
+          <Route path="DMs" element={<DMs />} />
+          <Route path="anonymous" element={<Anonymous />} />
+          <Route path="about" element={<About />} />
         </Route>
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
-  max-width: 1440px;
+max-width: 1440px;
+height: 100vh;
+max-height: 705px;
+background: lightgreen;
 `
 
 export default App

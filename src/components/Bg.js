@@ -5,16 +5,18 @@ const Bg = () => {
   return (
     <Wrapper className="bg d-none d-lg-block position-relative">
       <img src={background} alt="bg" />
-      <div className="position-absolute border border-danger"></div>
+      <div className="overlay position-absolute"></div>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
 width: 100%;
-  max-width: 50%;
-  height: 705px;
-  div {
+max-width: 50%;
+height: 100vh;
+max-height: 705px;
+overflow: hidden;
+.overlay {
     width: 100%;
     height: 100%;
     top: 0;

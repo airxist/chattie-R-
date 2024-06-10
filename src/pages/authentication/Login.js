@@ -1,19 +1,35 @@
 import styled from "styled-components"
-import { FormRow, Logo, Sign, Summitter } from "../components"
-import { Link } from "react-router-dom"
+import {
+  SwitchRoute,
+  FormRow,
+  Logo,
+  Summitter
+} from "../../components"
+import { Link, useNavigate } from "react-router-dom"
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
-    <Wrapper>
+    <Wrapper className="d-md-flex align-items-center justify-content-center">
       <Logo />
-      <form className="border mx-auto">
-        <Sign />
+      <form className="border mx-auto" 
+        onSubmit={(e) => {
+          e.preventDefault();
+          navigate('/dashboard')
+        }}
+      >
+        <SwitchRoute
+          text1="Login"
+          text1Action="/login"
+          text2="Register"
+          text2Action="/"
+        />
         {/* single form row */}
         <FormRow
           label="Email Address"
           type="email"
           name="email"
-          value="eg: johndoe@gmail.com"
+          value="johndoe@gmail.com"
         />
         {/* single form row link */}
         <FormRow
@@ -36,7 +52,9 @@ const Login = () => {
 
 const Wrapper = styled.div`
 width: 100%;
-padding: 36px 30px 94px 30px;
+padding: 36px 30px 94px;
+height: 100vh;
+background-color: white;
 form {
   width: 100%;
   // height: 447px;
@@ -45,6 +63,7 @@ form {
 @media screen and (min-width: 1024px) {
   padding: 64.5px 12px;
   max-width: 50%;
+  max-height: 705px;
   form {
     max-width: 377px;
     margin-top: unset
