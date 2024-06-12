@@ -7,9 +7,8 @@ const Alert = () => {
     useEffect(() => {
         showAlert("danger", "Registration")
     }, [])
-    console.log(alert)
   return (
-    <Alarm className={`position-absolute shadow-lg bg-light d-flex align-items-center rounded-3 ${alert.type}`}>
+    <Alarm className={`d-none position-absolute shadow-lg bg-light d-flex align-items-center rounded-3 ${alert.type}`}>
       <p className="alarm-msg m-0">{alert.msg}</p>
       <span className={`close badge ms-auto ${alert.type}`}>
         X

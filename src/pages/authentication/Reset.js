@@ -1,13 +1,12 @@
 import styled from "styled-components"
 import {
-  SwitchRoute,
   FormRow,
   Logo,
   Summitter
 } from "../../components"
 import { Link, useNavigate } from "react-router-dom"
 
-const Login = () => {
+const Reset = () => {
   const navigate = useNavigate();
   return (
     <Wrapper className="d-md-flex align-items-center justify-content-center border border-light">
@@ -16,15 +15,10 @@ const Login = () => {
         <form className="border mx-auto" 
           onSubmit={(e) => {
             e.preventDefault();
-            navigate('/dashboard')
+            navigate('/login')
           }}
         >
-          <SwitchRoute
-            text1="Login"
-            text1Action="/login"
-            text2="Register"
-            text2Action="/"
-          />
+          <h2>Reset Password</h2>
           {/* single form row */}
           <FormRow
             label="Email Address"
@@ -34,18 +28,13 @@ const Login = () => {
           />
           {/* single form row link */}
           <FormRow
-            link="Forgot password"
-            linkAddress="/forgot-password"
             label="Password"
             type="password"
             name="password"
             value="jsoe"
           />
           {/* submit button */}
-          <Summitter text="Login" />
-          <p className="m-0 mt-2">
-            You do not have an account? <Link to='/'>Register</Link>
-          </p>
+          <Summitter text="Done" />
         </form>
       </div>
     </Wrapper>
@@ -78,4 +67,4 @@ form {
 }
 `
 
-export default Login
+export default Reset

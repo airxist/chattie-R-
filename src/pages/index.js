@@ -1,8 +1,9 @@
 // Authentication Routes
 import Register from './authentication/Register'
 import Login from './authentication/Login'
-import VerifyEmail from './authentication/VerifyEmail'
-import CreateYourSpace from './authentication/Create'
+import Verify from './authentication/Verify'
+import CreateForget from './authentication/CreateForget'
+import Reset from './authentication/Reset'
 
 // Dashboard Routes
 import About from './dashboard/About'
@@ -15,10 +16,11 @@ export {
     About,
     Anonymous,
     Chats,
-    CreateYourSpace,
+    CreateForget,
     DMs,
     Login,
     Register,
     Reply,
-    VerifyEmail
+    Reset,
+    Verify
 }

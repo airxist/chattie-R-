@@ -4,7 +4,13 @@ import { useLocation } from "react-router-dom"
 import { useEffect } from "react";
 import { useGlobalContext } from "../../context";
 
-const CreateYourSpace = () => {
+const CreateForget = ({
+  hero,
+  label,
+  policy,
+  value,
+  submitAction
+}) => {
   const { setAuthImg } = useGlobalContext();
   const location = useLocation();
 
@@ -19,22 +25,20 @@ const CreateYourSpace = () => {
   return (
     <Wrapper className="d-block d-lg-flex align-items-center justify-content-center">
       <Logo />
-      <div className="form-container mx-auto border border-primary">
-        <form className="border">
-            <h3 className="text-lg-center">Create Your Own Space</h3>
+      <div className="form-container mx-auto d-flex align-items-center justify-content-center flex-column">
+        <form onSubmit={submitAction}>
+            <h3 className="text-lg-center">{hero}</h3>
             <FormRow
-                label="It’s your private space, why dont you give it a name"
+                label={label}
                 type="text"
                 name="team"
-                value="My Dev Team"
+                value={value}
             />
             <Summitter
                 text="Next"
             />
         </form>
-        <p className="policy-para">
-            By continuing, you are agreeing to our terms of service, user terms of service, privacy policy and cookie policy
-        </p>
+        {policy && <p className="policy-para">{policy}</p>}
       </div>
     </Wrapper>
   )
@@ -42,15 +46,22 @@ const CreateYourSpace = () => {
 
 const Wrapper = styled.div`
 width: 100%;
-height: 100vh;
-padding: 36px 30px 150px;
+min-height: 100vh;
+padding: 36px 30px;
+background-color: white;
 .form-container {
-  margin-top: 65px
+  width: 100%;
+  min-height: 85vh;
+}
+form {
+  width: 100%;
+  margin-top: 28px;
 }
 .policy-para {
   margin-top: 26px;
 }
 @media screen and (min-width: 1024px) {
+  padding: 0;
   .form-container {
     max-width: 512px;
     margin-top: unset
@@ -58,4 +69,4 @@ padding: 36px 30px 150px;
 }
 `
 
-export default CreateYourSpace
+export default CreateForget

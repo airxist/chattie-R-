@@ -11,12 +11,12 @@ import { Link, useNavigate } from "react-router-dom"
 const Register = () => {
   const navigate = useNavigate();
   return (
-    <Wrapper className="border">
+    <Wrapper className="">
       <Logo />
       <div className="form-container d-flex align-items-center justify-content-center">
         <form className="border mx-auto" onSubmit={(e) => {
             e.preventDefault();
-            navigate('/verify-email')
+            navigate('/verify')
           }}>
             <SwitchRoute
               text1="Login"
@@ -67,20 +67,18 @@ const Register = () => {
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 100vh;
-  padding: 36px 30px 94px;
+  min-height: 100vh;
+  padding: 36px 30px;
   background-color: white;
   .form-container {
     width: 100%;
     min-height: 85vh;
-    background: yellow;
   }
   form {
     width: 100%;
     margin-top: 28px;
   }
   @media screen and (min-width: 1024px) {
-    padding: 64.5px 12px;
     max-width: 50%;
     height: 100vh;
     padding: 0;
@@ -89,7 +87,6 @@ const Wrapper = styled.div`
     }
     form {
       max-width: 377px;
-      margin-top: unset
     }
   }
 `
