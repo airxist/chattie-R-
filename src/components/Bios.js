@@ -9,7 +9,7 @@ const Bios = ({
     role
 }) => {
   return (
-    <Wrapper>
+    <Wrapper className="ms-md-5">
         <Status type={online}/>
       <h3 className="username">{username}</h3>
       <p className="email m-0">{email}</p>

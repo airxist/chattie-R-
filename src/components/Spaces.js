@@ -3,13 +3,7 @@ import styled from "styled-components"
 const Spaces = () => {
   return (
     <Wrapper>
-        <div className='d-flex align-items-center justify-content-between border border-danger'>
-            <p className='m-0'>Spaces</p>
-            <button className='btn btn-secondary btn-sm'>
-                + Add New
-            </button>
-        </div>
-        
+
     </Wrapper>
   )
 }

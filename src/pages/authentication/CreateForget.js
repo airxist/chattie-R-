@@ -1,5 +1,9 @@
 import styled from "styled-components"
-import { FormRow, Logo, Summitter } from "../../components"
+import {
+  Bars,
+  FormRow, 
+  Logo, 
+  Summitter } from "../../components"
 import { useLocation } from "react-router-dom"
 import { useEffect } from "react";
 import { useGlobalContext } from "../../context";
@@ -24,6 +28,7 @@ const CreateForget = ({
 
   return (
     <Wrapper className="d-block d-lg-flex align-items-center justify-content-center">
+      <Bars />
       <Logo />
       <div className="form-container mx-auto d-flex align-items-center justify-content-center flex-column">
         <form onSubmit={submitAction}>
@@ -49,6 +54,7 @@ width: 100%;
 min-height: 100vh;
 padding: 36px 30px;
 background-color: white;
+isolation: isolate;
 .form-container {
   width: 100%;
   min-height: 85vh;

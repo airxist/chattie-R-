@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { Return } from '../../components'
 import ProfileImg from '../../components/ProfileImg'
 import Bios from '../../components/Bios'
+import ProfileSpaces from '../../components/ProfileSpaces'
 
 const Profile = () => {
   return (
@@ -10,19 +11,17 @@ const Profile = () => {
             to="/dashboard"
             text="Profile"
         />
-        <div className='details border mt-3'>
-          <div className='personal'>
+        <div className='details mt-3'>
+          <div className='personal d-md-flex '>
             <ProfileImg />
             <Bios 
-              online="offline"
+              online="online"
               username="Titilope Adewumi"
               email="titilopeade@gmail.com"
               role="Admin"
             />
           </div>
-          <div className='spaces'>
-
-          </div>
+          <ProfileSpaces />
         </div>
     </Wrapper>
   )
@@ -30,9 +29,12 @@ const Profile = () => {
 
 const Wrapper = styled.div`
 background: white;
-height: 100vh;
+min-height: 100vh;
 .return {
     padding: 17.5px;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 .details {
     min-height: 417px;
@@ -42,7 +44,12 @@ height: 100vh;
 
 }
 @media screen and (min-width: 1024px) {
-
+.return {
+  padding: 17.5px 235px;
+}
+.details {
+  padding: 0 235px;
+}
 }
 `
 

@@ -3,14 +3,16 @@ import {
   SwitchRoute,
   FormRow,
   Logo,
-  Summitter
+  Summitter,
+  Bars
 } from "../../components"
 import { Link, useNavigate } from "react-router-dom"
 
 const Login = () => {
   const navigate = useNavigate();
   return (
-    <Wrapper className="d-md-flex align-items-center justify-content-center border border-light">
+    <Wrapper className="d-md-flex align-items-center justify-content-center border border-light position-relative">
+      <Bars />
       <Logo />
       <div className="form-container d-flex align-items-center jstify-content-center">
         <form className="border mx-auto" 
@@ -57,6 +59,7 @@ width: 100%;
 min-height: 100vh;
 padding: 36px 30px;
 background-color: white;
+isolation: isolate;
 .form-container {
   width: 100%;
   min-height: 85vh;

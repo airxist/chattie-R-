@@ -1,10 +1,14 @@
 import styled from "styled-components"
-import Indicate from "../../components/Indicate"
-import Back from "../../components/Back"
+import {
+  Bars,
+  Back,
+  Indicate
+} from "../../components"
 
 const Verify = () => {
   return (
     <Wrapper className="d-flex align-items-center justify-content-center position-relative">
+      <Bars />
       {/* link to register */}
       <Back to="/" text="Back" />
       <div className="confirm-box text-center border">
@@ -30,6 +34,7 @@ width: 100%;
 height: 100vh;
 padding: 30px;
 background-color: white;
+isolation: isolate;
 .back {
   position: absolute;
   top: 30px;

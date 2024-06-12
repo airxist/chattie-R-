@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { 
+  Bars,
   SwitchRoute,
   FormRow,
   Logo,
@@ -11,7 +12,8 @@ import { Link, useNavigate } from "react-router-dom"
 const Register = () => {
   const navigate = useNavigate();
   return (
-    <Wrapper className="">
+    <Wrapper className="positon-relative">
+      <Bars />
       <Logo />
       <div className="form-container d-flex align-items-center justify-content-center">
         <form className="border mx-auto" onSubmit={(e) => {
@@ -70,6 +72,7 @@ const Wrapper = styled.div`
   min-height: 100vh;
   padding: 36px 30px;
   background-color: white;
+  isolation: isolate;
   .form-container {
     width: 100%;
     min-height: 85vh;
