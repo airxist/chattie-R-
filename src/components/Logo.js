@@ -5,7 +5,7 @@ const Logo = ({
   route
 }) => {
   return (
-    <Wrapper className={`d-flex align-items-center justify-content-between ${route ? "d-block" : "d-lg-none"}`}>
+    <Wrapper className={`logo d-flex align-items-center justify-content-between ${route ? "d-block" : "d-lg-none"}`}>
       <img src={logo} alt='' />
       <h3 className='m-0'>Chattie</h3>
     </Wrapper>

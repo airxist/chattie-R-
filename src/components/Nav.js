@@ -42,6 +42,7 @@ transition: transform .3s;
     display: none;
 }
 @media screen and (min-width: 1024px) {
+    width: 20%;
     position: sticky;
     top: 0;
     left: 0;

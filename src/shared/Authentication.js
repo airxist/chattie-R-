@@ -17,8 +17,8 @@ const Authentication = () => {
 }
 
 const Wrapper = styled.div`
-  // background: red;
-  min-height: 100vh;
+  background: red;
+  height: 100vh;
   // max-height: 705px;
 `
 

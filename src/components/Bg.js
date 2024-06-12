@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 width: 100%;
 max-width: 50%;
 height: 100vh;
-max-height: 705px;
+// max-height: 705px;
 overflow: hidden;
 .overlay {
     width: 100%;

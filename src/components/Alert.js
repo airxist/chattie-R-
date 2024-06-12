@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const Alert = () => {
     const { alert, showAlert } = useLocalState();
     useEffect(() => {
-        showAlert("success", "Registration")
+        showAlert("danger", "Registration")
     }, [])
     console.log(alert)
   return (

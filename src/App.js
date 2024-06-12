@@ -17,7 +17,7 @@ const App = () => {
           <Route path="/create-space" element={<CreateYourSpace />} />
         </Route>
         {/* shared layout Dashboard */}
-        <Route path="/dashboard" element={<Dashboard />}>
+        {/* <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<Chats 
             description="At My team, All communication is strictly business based. Nothing outside business"
           />} />
@@ -25,7 +25,7 @@ const App = () => {
           <Route path="DMs" element={<DMs />} />
           <Route path="anonymous" element={<Anonymous />} />
           <Route path="about" element={<About />} />
-        </Route>
+        </Route> */}
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </Wrapper>
@@ -33,9 +33,6 @@ const App = () => {
 }
 
 const Wrapper = styled.div`
-max-width: 1440px;
-height: 100vh;
-max-height: 705px;
 background: lightgreen;
 `
 

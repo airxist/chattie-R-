@@ -57,7 +57,7 @@ body {
 
 @media screen and (min-width: 1024px) {
   .dash-feature {
-    width: calc(100% - 280px);
+    width: 80%;
     min-height: 100vh;
   }
 }
