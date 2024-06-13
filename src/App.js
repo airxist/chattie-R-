@@ -51,7 +51,7 @@ const App = () => {
           />} />
         </Route>
         {/* shared layout Dashboard */}
-        {/* <Route path="/dashboard" element={<Dashboard />}>
+        <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<Chats 
             description="At My team, All communication is strictly business based. Nothing outside business"
           />} />
@@ -59,7 +59,8 @@ const App = () => {
           <Route path="DMs" element={<DMs />} />
           <Route path="anonymous" element={<Anonymous />} />
           <Route path="about" element={<About />} />
-        </Route> */}
+        </Route>
+        
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </Wrapper>

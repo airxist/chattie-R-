@@ -7,7 +7,7 @@ import {
 
 const Dashboard = () => {
   return (
-    <Wrapper className="position-relative d-md-flex align-items-center">
+    <Wrapper className="position-relative d-md-flex align-items-start">
       <Nav />
       <Modal />
       <Outlet />
@@ -17,9 +17,7 @@ const Dashboard = () => {
 
 const Wrapper = styled.div`
   min-height: 100vh;
-  max-height: 705px;
   background: orange;
-  // overflow: hidden;
 `
 
 

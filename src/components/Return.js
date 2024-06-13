@@ -6,7 +6,7 @@ const Return = ({
   text
 }) => {
     return (
-        <Wrapper className='return'>
+        <Wrapper className='return position-sticky'>
           <Back
             to={to}
             text={text}
@@ -19,6 +19,8 @@ const Wrapper = styled.div`
 padding: 15px;
 height: 70px;
 background-color: var(--chat-bg-purple);
+top: 0;
+left: 0;
 .back-icon {
   border: solid 3px black;
 }

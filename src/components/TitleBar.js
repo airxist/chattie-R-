@@ -14,6 +14,9 @@ const Wrapper = styled.div`
 padding: 15px;
 height: 70px;
 background-color: var(--chat-bg-purple);
+position: sticky;
+top:0;
+left: 0;
 @media screen and (min-width: 1024px) {
   padding: 15px 95px;
 }

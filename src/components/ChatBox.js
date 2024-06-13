@@ -9,6 +9,7 @@ const ChatBox = ({
     date,
     message,
     replies,
+    important,
     user,
     hide
 }) => {
@@ -23,9 +24,11 @@ const ChatBox = ({
         <div className="detail d-flex align-items-center">
           {!hide && <h4 className="name m-0">{name}</h4>}
           <p className="date m-0 mx-3">{date}</p>
-          <span className="carbon badge">
-              <img src={carbon} alt="carbon" />
-          </span>
+          {
+            important && <span className="carbon badge">
+                <img src={carbon} alt="carbon" />
+            </span>
+          }
         </div>
         <p className="msg mt-3">{message}</p>
         {replies && <Link to="reply" className="replies text-purple">Daniel Adewumin and 22 others</Link>}

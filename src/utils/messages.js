@@ -6,6 +6,7 @@ const messages = [
         date: "12-12-2024",
         message: "Hi Everyone, I am alone here  Hi Everyone, I am alone here Hi Everyone, I am alone here Hi Everyone, I am alone here Hi Everyone, I am alone here Hi Everyone, I am alone here Hi Everyone, I am alone here Hi Everyone, I am alone here Hi Everyone, I am alone here Hi Everyone, I am alone here Hi Everyone, I am alone here",
         replies: false,
+        important: true,
         user: false
     },
     {

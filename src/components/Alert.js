@@ -1,9 +1,9 @@
 import styled from "styled-components"
-import useLocalState from "../utils/localState"
+import useDefaultState from "../utils/default";
 import { useEffect } from "react";
 
 const Alert = () => {
-    const { alert, showAlert } = useLocalState();
+    const { alert, showAlert } = useDefaultState();
     useEffect(() => {
         showAlert("danger", "Registration")
     }, [])

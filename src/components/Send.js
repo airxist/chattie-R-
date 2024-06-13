@@ -30,7 +30,7 @@ border: solid 2px var(--primary-purple);
 background-color: white;
 padding: 12px 10px;
 height: 48px;
-margin: 39px 0 20px;
+margin: 0px 0 20px;
 #message {
     width: calc(100% - 24px);
     border:none;

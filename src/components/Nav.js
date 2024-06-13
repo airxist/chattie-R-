@@ -8,7 +8,9 @@ const Nav = () => {
   return (
     <Wrapper className='d-flex flex-column justify-content-between'>
         <header className='hero'>
-            <Logo route="true" />
+            <Logo
+                route="true" 
+            />
         </header>
         <DashRoutes />
         <Spaces />
@@ -22,9 +24,10 @@ width: 280px;
 height: 100vh;
 background-color: white;
 transform: translate(-100%);
-position: absolute;
+position: fixed;
 top: 0;
 left: 0;
+z-index: 10;
 overflow: hidden;
 transition: transform .3s;
 
@@ -46,7 +49,6 @@ transition: transform .3s;
     position: sticky;
     top: 0;
     left: 0;
-    // max-height: 705px; // to set he max height
     transform: translate(0%);
 
     .dash-routes {

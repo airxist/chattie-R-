@@ -3,7 +3,7 @@ import Return from "./Return"
 import TitleBar from "./TitleBar"
 import Send from "./Send"
 import DashRoutes from "./DashRoutes"
-import ChooseRoute from "./SwitchRoute"
+import Choice from "./Choice"
 import ChatBox from "./ChatBox"
 
 const Display = ({
@@ -15,91 +15,81 @@ const Display = ({
     hide
 }) => {
   return (
-    <Wrapper className="dash-feature">
-      {reply ? <Return to="/dashboard" text="Reply to kosoko" /> : <TitleBar space="My team" />}
-      <div className={`${dashRouting ? "added" : "boxing"}`}>
-        <div className="box">
-            <div
-                className="display"
-            >
+    <Wrapper className="dash-feature position-relative">
+      
+      {reply ? <Return to="/dashboard" text="Reply to kosoko"/> : <TitleBar space="My team"/>
+      }
+
+      <div className="boxing">
+        <div className="display border border-primary">
                 {description && <p className='m-0'>{description}</p>}
                 {
-                    switching && <ChooseRoute
-                        text1="Chats"
-                        // text1Action="/"
-                        text2="Important"
-                        // text2Action="/"
+                    switching && <Choice
+                        btnText1="Chats"
+                        btnText2="Important"
                     />
                 }
                 <div className="messages">
-                {messages.map(message => {
-                    return <ChatBox
-                    key={message.id}
-                    {...message}
-                    hide={hide}
-                    />
-                })}
+                  {messages.map(message => {
+                      return <ChatBox
+                      key={message.id}
+                      {...message}
+                      hide={hide}
+                      />
+                  })}
                 </div>
-            </div>
-            <Send />
         </div>
       </div>
-      {dashRouting && <DashRoutes media={true} />}
+      
+      <div className="send-dash-routes mx-auto position-sticky">
+        <Send />
+        {dashRouting && <DashRoutes media={true} />}
+      </div>
     </Wrapper>
   )
 }
 
+
 const Wrapper = styled.div`
+min-height: 100vh;
+.boxing {
+  padding: 30px 15px;
+}
+
+.send-dash-routes {
+  width: 100%;
+  padding: 0 15px;
+  min-height: 68px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+}
+
+.dash-routes {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: solid 2px red;
+}
+
+@media screen and (min-width: 1024px) {
   .boxing {
-    height: calc(100vh - 70px);
-    padding: 15px;
-}
-.added {
-    height: calc(100vh - 142px);
-    padding: 15px;
-}
-
-  .box {
-    height: 100%;
+    padding: 30px 95px;
   }
 
-  .display {
-    overflow-y: scroll;
-    height: 85%;
+  .send-dash-routes {
+    padding: 0;
+    width: 85%;
   }
-
+  
   .dash-routes {
+    display: none;
     background: yellow;
-    height: 72px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
   }
-
-  @media screen and (min-width: 1024px) {
-    .boxing,
-    .added {
-      padding: 30px 95px;
-    }
-
-    .added {
-        height: calc(100vh - 70px);
-    }
-
-    .box {
-      height: 85%;
-    //   background: yellow;
-    }
-    .display {
-      height: 95%;
-      background: yellow;
-    }
-
-    .dash-routes {
-        display: none;
-      }
-  }
+}
 `
 
 export default Display

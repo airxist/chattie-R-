@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const useLocalState = () => {
+const useDefaultState = () => {
     const [ loading, setLoading ] = useState(false);
     const [ success, setSuccess ] = useState(false);
     const [ alert, setAlert ] = useState({
@@ -22,4 +22,4 @@ const useLocalState = () => {
     }
 }
 
-export default useLocalState;
+export default useDefaultState;

@@ -1,9 +1,10 @@
 import styled from "styled-components"
+import SpaceBar from "./SpaceBar"
 
 const Spaces = () => {
   return (
     <Wrapper>
-
+      <SpaceBar />
     </Wrapper>
   )
 }
